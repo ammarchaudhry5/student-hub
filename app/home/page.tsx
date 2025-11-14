@@ -4,6 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import {ActiveMember} from "@/components/ActiveMember";
 import {FeedCard} from "@/components/FeedCard";
+import {ABC} from "@/helpers";
 
 export default function FeedPage() {
     const router = useRouter();
@@ -19,6 +20,8 @@ export default function FeedPage() {
         "/images/pic-2.jpg",
         "/images/pic-1.jpg",
     ]
+
+    const s = ABC
 
     return (
         <div className=" grid grid-cols-1 w-1/2 min-h-screen bg-gray-500">
@@ -40,6 +43,9 @@ export default function FeedPage() {
                     poster={"/images/pic-1.jpg"}
                     likesCount={1786}
                     description={"My experience with react/next js is good!"}
+                    commentsCount={86}
+                    isLiked={true}
+                    isSaved={true}
                 />
             </main>
         </div>

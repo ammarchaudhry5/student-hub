@@ -5,8 +5,7 @@ import {router} from "next/client";
 
 const NavBar = () => {
     return (
-        <header className="grid grid-cols-1 bg-gradient-to-br from-blue-700 via-blue-400 to-indigo-200 text-white py-4 px-8 flex-col justify-between items-center">
-            {/*left side nav bar*/}
+        <header className="grid grid-cols-1 bg-gradient-to-br from-blue-700 via-blue-400 to-indigo-200 text-white py-4 px-8 flex-col justify-between items-center ">
             <div className="flex flex-col items-start gap-2">
                 <button
                     className="mx-2 mb-5 p-1 rounded hover:bg-indigo-600"
@@ -19,13 +18,13 @@ const NavBar = () => {
                         <h1 className="text-2xl mt-1 font-bold">Student Hub</h1>
                     </div>
                 </button>
-                <NavBarItem icon={"/home-filled.svg"} title={"Home"} onClick={() => {}}></NavBarItem>
-                <NavBarItem icon={"/search-icon.svg"} title={"Search"} onClick={() => {}}></NavBarItem>
-                <NavBarItem icon={"/tv-outlined.svg"} title={"Reels"} onClick={() => {}}></NavBarItem>
-                <NavBarItem icon={"/chat-outlined.svg"} title={"Messages"} onClick={() => {}}></NavBarItem>
-                <NavBarItem icon={"/create-icon.svg"} title={"Create"} onClick={() => {}}></NavBarItem>
-                <NavBarItem icon={"/notification-outlined.svg"} title={"Notifications"} onClick={() => {}}></NavBarItem>
-                <NavBarItem icon={"/profile-outlined.svg"} title={"Profile"} onClick={() => {}}></NavBarItem>
+                <NavBarItem icon={"/home-filled.svg"} title={"Home"} onClick={() => {console.log("home tab clicked!")}}></NavBarItem>
+                <NavBarItem icon={"/search-icon.svg"} title={"Search"} onClick={() => {console.log("search tab clicked!")}}></NavBarItem>
+                <NavBarItem icon={"/tv-outlined.svg"} title={"Reels"} onClick={() => {console.log("reels tab clicked!")}}></NavBarItem>
+                <NavBarItem icon={"/chat-outlined.svg"} title={"Messages"} onClick={() => {console.log("messages tab clicked!")}}></NavBarItem>
+                <NavBarItem icon={"/create-icon.svg"} title={"Create"} onClick={() => {console.log("create tab clicked!")}}></NavBarItem>
+                <NavBarItem icon={"/notification-outlined.svg"} title={"Notifications"} onClick={() => {console.log("notifications tab clicked!")}}></NavBarItem>
+                <NavBarItem icon={"/profile-outlined.svg"} title={"Profile"} onClick={() => {console.log("profile tab clicked!")}}></NavBarItem>
             </div>
         </header>
     )
