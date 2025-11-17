@@ -1,124 +1,168 @@
-import React, {useState} from "react";
-import {PostDetailModal} from "@/components/PostDetailModal";
+import React, { useState } from "react";
+import { Modal } from "@/components/Modal";
+import { PostDetailModal } from "@/components/PostDetailModal";
+import { Comment } from "@/helpers/types";
 
-interface PostCommentModalPops {
-    userProfilePicture: string;
-    userName: string;
-    comment: string;
-    // commentReply: string;
-    commentTime: string;
-    // isCommentLiked: boolean;
-    commentLikesCounts: number;
-    commentRepliesCount: number;
+interface PostCommentModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    comments: Comment[];
 }
 
-export function PostCommentModal ({
-                                      userProfilePicture,
-                                      comment,
-                                      // commentReply,
-                                      userName,
-                                      commentTime,
-                                      // isCommentLiked,
-                                      commentLikesCounts,
-                                      commentRepliesCount,
-}: PostCommentModalPops){
+export function PostCommentModal({ isOpen, onClose, comments }: PostCommentModalProps) {
     const [isPostDetailModalOpen, setIsPostDetailModalOpen] = useState(false);
-    const [liked, setLiked] = useState(false);
-    const toggleLike = () => {
-        setLiked(changed => !changed);
-        console.log("Like toggled:", !liked);
+    const [openReplies, setOpenReplies] = useState<{ [key: number]: boolean }>({});
+    const [commentLikes, setCommentLikes] = useState<{ [key: number]: boolean }>({});
+    const [replyLikes, setReplyLikes] = useState<{ [key: number]: boolean }>({});
+    const toggleReplies = (commentId: number) => {
+        setOpenReplies((prev) => ({
+            ...prev,
+            [commentId]: !prev[commentId],
+        }));
     };
+    const toggleCommentLike = (commentId: number) => {
+        setCommentLikes((prev) => ({
+            ...prev,
+            [commentId]: !prev[commentId],
+        }));
+    };
+    const toggleReplyLike = (replyId: number) => {
+        setReplyLikes((prev) => ({
+            ...prev,
+            [replyId]: !prev[replyId],
+        }));
+    };
+
     return (
-      <div>
-          <div>
-              <div className="flex items-center">
-                  <div className="relative w-12 h-12">
-                      <div
-                          onClick={() => console.log("user profile img clicked")}
-                          className="border-2 border-blue-500 rounded-full w-full h-full flex items-center justify-center overflow-hidden"
-                      >
-                          <img
-                              src={userProfilePicture}
-                              alt="profile image"
-                              className="w-full h-full object-cover"
-                          />
-                      </div>
-                  </div>
-                  <div>
-                      <p
-                          className="ml-4 mr-2 text-white text-lg font-semibold leading-tight cursor-pointer"
-                          onClick={() => console.log("username clicked")}
-                      >
-                          {userName}
-                      </p>
+        <Modal isOpen={isOpen} onClose={onClose}>
+            <div className="p-4">
 
-                      <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+                <h2 className="text-lg font-semibold mb-4">Comments</h2>
 
-                      <p className="text-gray-300 text-base font-normal ml-2 leading-tight">
-                          {comment}
-                      </p>
-                  </div>
-                  <div>
-                      <img
-                          src="/three-dots-horizontal-icon.svg"
-                          alt="post details icon"
-                          onClick={() => {
-                              console.log("open post details modal");
-                              setIsPostDetailModalOpen(true)
-                          }}
-                          className="rounded-full h-8 w-8 p-1 hover:bg-gray-300 cursor-pointer"
-                      />
-                  </div>
-              </div>
-              <div className="flex gap-5">
-                  <img
-                      src={liked ? "/like-filled.svg" : "/like-outlined.svg"}
-                      alt="like icon"
-                      onClick={toggleLike}
-                      className="h-8 w-8 cursor-pointer"
-                  />
-              </div>
-              <PostDetailModal
-                  isOpen={isPostDetailModalOpen}
-                  onClose={() => {
-                      console.log("close post details modal");
-                      setIsPostDetailModalOpen(false)
-                  }}
-              >
-              </PostDetailModal>
-          </div>
-          <div>
-              <div>
-                  <p className="ml-4 mr-2 text-white text-base font-normal">
-                      {commentTime}
-                  </p>
+                <div className="max-h-[450px] overflow-y-scroll pr-3">
 
-                  <p
-                      className="text-gray-300 text-base font-normal ml-2 leading-tight cursor-pointer"
-                      onClick={() => console.log("comment likes clicked")}
-                  >
-                      {`${commentLikesCounts} likes`}
-                  </p>
+                    {comments.map((comment) => {
+                        const isRepliesOpen = openReplies[comment.id] || false;
 
-                  <p
-                      className="text-gray-300 text-base font-normal ml-2 leading-tight cursor-pointer"
-                      onClick={() => console.log("comment reply clicked")}
-                  >
-                      Reply
-                  </p>
-              </div>
-          </div>
-          <div>
-              <p
-                  className="text-gray-300 text-base font-normal ml-2 leading-tight cursor-pointer"
-                  onClick={() => console.log("comment reply clicked")}
-              >
-                  {`__view all ${commentRepliesCount} replies`}
-              </p>
-          </div>
-          <div>
+                        return (
+                            <div key={comment.id} className="mb-6">
 
-          </div>
-      </div>
+                                <div className="flex items-start gap-3">
+                                    <img
+                                        src={comment.userProfilePicture}
+                                        className="w-10 h-10 rounded-full border border-blue-500 object-cover"
+                                    />
+
+                                    <div className="flex-1">
+                                        <p className="text-sm">
+                                            <span className="font-semibold">{comment.username}</span>{" "}
+                                            {comment.comment}
+                                        </p>
+
+                                        <div className="flex gap-3 text-xs text-gray-600 mt-1">
+                                            <span>{comment.time}</span>
+                                            <span
+                                                className="cursor-pointer"
+                                                onClick={() => {
+                                                    console.log(`comment likes count: ${comment.likesCount}`)
+                                                }}
+                                            >
+                                                {comment.likesCount} likes
+                                            </span>
+                                            <span className="cursor-pointer">Reply</span>
+                                        </div>
+
+                                        {comment.commentReplies.length > 0 && (
+                                            <p
+                                                className="text-xs text-gray-500 mt-2 cursor-pointer"
+                                                onClick={() => {
+                                                    toggleReplies(comment.id)
+                                                    console.log(`comment id: ${comment.id}`)
+                                                }}
+                                            >
+                                                {isRepliesOpen
+                                                    ? "— hide replies"
+                                                    : `— view all ${comment.commentReplies.length} replies`}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    <img
+                                        src={
+                                            commentLikes[comment.id]
+                                                ? "/like-filled.svg"
+                                                : "/like-outlined.svg"
+                                        }
+                                        onClick={() => {
+                                            toggleCommentLike(comment.id)
+                                            console.log(`comment like id: ${comment.id}`)
+                                        }}
+                                        className="w-5 h-5 cursor-pointer"
+                                    />
+
+                                    <img
+                                        src="/three-dots-horizontal-black-icon.svg"
+                                        className="h-8 w-8 p-1 rounded-full hover:bg-gray-200 cursor-pointer"
+                                        onClick={() => setIsPostDetailModalOpen(true)}
+                                    />
+                                </div>
+
+                                {isRepliesOpen && (
+                                    <div className="mt-3 ml-12">
+                                        {comment.commentReplies.map((reply) => (
+                                            <div key={reply.id} className="flex items-start gap-3 mt-3">
+                                                <img
+                                                    src={reply.userProfilePicture}
+                                                    className="w-8 h-8 rounded-full border border-blue-500 object-cover"
+                                                />
+
+                                                <div>
+                                                    <p className="text-sm">
+                                                        <span className="font-semibold">{reply.username}</span>{" "}
+                                                        {reply.comment}
+                                                    </p>
+
+                                                    <div className="flex gap-3 text-xs text-gray-600 mt-1">
+                                                        <span>{reply.time}</span>
+                                                        <span
+                                                            className="cursor-pointer"
+                                                            onClick={() => {
+                                                                console.log(`comment reply likes count: ${reply.likesCount}`)
+                                                            }}
+                                                        >
+                                                            {reply.likesCount} likes
+                                                        </span>
+                                                        <span className="cursor-pointer">Reply</span>
+                                                    </div>
+                                                </div>
+
+                                                <img
+                                                    src={
+                                                        replyLikes[reply.id]
+                                                            ? "/like-filled.svg"
+                                                            : "/like-outlined.svg"
+                                                    }
+                                                    onClick={() => {
+                                                        toggleReplyLike(reply.id)
+                                                        console.log(`comment reply like id: ${reply.id}`)
+                                                    }}
+                                                    className="w-5 h-5 cursor-pointer"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+
+                </div>
+
+                <PostDetailModal
+                    isOpen={isPostDetailModalOpen}
+                    onClose={() => setIsPostDetailModalOpen(false)}
+                />
+            </div>
+        </Modal>
     );
 }

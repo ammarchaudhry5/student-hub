@@ -6,13 +6,6 @@ interface NavBarItemProps {
     onClick: ()=>void
 }
 
-// interface XyzProps {
-//   title: string;
-//   img?:string;
-//  // hj:object3[]
-//   objectA:{abc:string, ytr:number};
-// }
-
 export function NavBarItem({icon, title, onClick}: NavBarItemProps) {
   return <button
       className="mx-2 p-1 rounded hover:bg-indigo-600"
@@ -20,7 +13,7 @@ export function NavBarItem({icon, title, onClick}: NavBarItemProps) {
   >
       <div className="flex">
           <img src={icon} alt="Logo" width={32}/>
-          <h1 className="text-lg ml-2 my-3 font-medium">{title}</h1>
+          <h1 className="text-lg ml-2 my-3 font-semibold font-sans">{title}</h1>
       </div>
   </button>;
 }
