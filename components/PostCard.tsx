@@ -14,7 +14,8 @@ export function PostCard({
                              post,
                              user,
                              comment,
-                         }: PostCardProps) {
+                         }: PostCardProps)
+{
 
     const [isPostDetailModalOpen, setIsPostDetailModalOpen] = useState(false);
     const [liked, setLiked] = useState(false);

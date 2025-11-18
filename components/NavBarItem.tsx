@@ -1,19 +1,27 @@
 import React from "react";
 
 interface NavBarItemProps {
-    icon: string,
-    title: string,
-    onClick: ()=>void
+    activeIcon: string;
+    inactiveIcon: string;
+    title: string;
+    isActive: boolean;
+    onClick: () => void;
 }
 
-export function NavBarItem({icon, title, onClick}: NavBarItemProps) {
-  return <button
-      className="mx-2 p-1 rounded hover:bg-indigo-600"
-      onClick={onClick}
-  >
-      <div className="flex">
-          <img src={icon} alt="Logo" width={32}/>
-          <h1 className="text-lg ml-2 my-3 font-semibold font-sans">{title}</h1>
-      </div>
-  </button>;
+export function NavBarItem({ activeIcon, inactiveIcon, title, isActive, onClick }: NavBarItemProps) {
+    return (
+        <button
+            className="mx-2 p-2 rounded hover:bg-green-200"
+            onClick={onClick}
+        >
+            <div className="flex items-center">
+                <img
+                    src={isActive ? activeIcon : inactiveIcon}
+                    alt={title}
+                    width={32}
+                />
+                <h1 className={` ${isActive ? "text-xl font-semibold" : "text-lg font-medium"} text-xl ml-4 font-sans`}>{title}</h1>
+            </div>
+        </button>
+    );
 }

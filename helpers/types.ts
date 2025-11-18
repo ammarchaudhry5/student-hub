@@ -1,7 +1,18 @@
 export interface User {
     id: number;
+    email: string;
+    username: string;
     name: string;
     profilePicture: string;
+    bio: string;
+    links: string[];
+    followers: User[];
+    followersCount: number;
+    followings: User[];
+    followingsCount: number;
+    posts: Post[];
+    postsCount: number;
+    savedPosts: Post[];
 }
 
 export interface Post {
