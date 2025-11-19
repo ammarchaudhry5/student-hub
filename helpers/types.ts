@@ -52,3 +52,23 @@ export interface CommentReplies {
     time: string;
     likesCount: number;
 }
+
+// export interface NotificationUser {
+//     id: number;
+//     username: string;
+//     profilePicture: string;
+// }
+
+export interface NotificationItem {
+    id: number;
+    users: User[];
+    action: string;
+    time: string;
+    previewImage?: string;
+    followBack?: boolean;
+}
+
+export interface NotificationGroup {
+    title: string;
+    list: NotificationItem[];
+}

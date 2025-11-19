@@ -1,29 +1,11 @@
 "use client";
 
-import React from "react";
+import React, {useState} from "react";
 import { User } from "@/helpers/types";
+import { user } from "@/helpers/SampleData";
 
 const Profile = () => {
-    const user: User = {
-        id: 1,
-        email: "ammar@example.com",
-        username: "ammar_ch",
-        name: "Ammar",
-        profilePicture: "/images/user-1.jpg",
-        bio: "Passionate developer and student.",
-        links: [
-            "https://github.com/ammarchaudhry5",
-            "https://linkedin.com/in/ammar-chaudhry1",
-        ],
-        followers: [],
-        followersCount: 7,
-        followings: [],
-        followingsCount: 5,
-        posts: [],
-        postsCount: 1,
-        savedPosts: [],
-    };
-
+    const [activeTab, setActiveTab] = useState<"posts" | "portfolio" | "saved">("posts");
     return (
         <div className="grid grid-cols-3 h-screen w-full bg-white text-gray-800">
             {/*LEFT SIDE COLUMN USER PIC AND INFO*/}
@@ -85,83 +67,58 @@ const Profile = () => {
             </div>
             {/*RIGHT SIDE GRID*/}
             <div className="col-span-2 p-4 my-10 mr-6 border-2 border-gray-300 rounded-xl bg-white">
-                <div className="flex justify-around bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 py-3 rounded-lg border-2 border-gray-300 shadow mb-6">
-                    <span className="cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-lg text-lg font-bold">
+
+                <div className="flex justify-around bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 py-1 rounded-lg border-2 border-gray-300 shadow mb-6">
+                    <span className={`cursor-pointer px-16 py-2 rounded-lg text-lg font-bold ${
+                        activeTab === "posts" ? "bg-gray-200" : "hover:bg-gray-200"
+                    }`}
+                          onClick={() => setActiveTab("posts")}
+                    >
                         Posts
                     </span>
-                    <span className="cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-lg  text-lg font-bold">
+                    <span
+                        className={`cursor-pointer px-16 py-2 rounded-lg text-lg font-bold ${
+                            activeTab === "portfolio" ? "bg-gray-200" : "hover:bg-gray-200"
+                        }`}
+                        onClick={() => setActiveTab("portfolio")}
+                    >
                         Portfolio
                     </span>
-                    <span className="cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-lg  text-lg font-bold">
+                    <span
+                        className={`cursor-pointer px-16 py-2 rounded-lg text-lg font-bold ${
+                            activeTab === "saved" ? "bg-gray-200" : "hover:bg-gray-200"
+                        }`}
+                        onClick={() => setActiveTab("saved")}
+                    >
                         Saved
                     </span>
                 </div>
 
-                <div className="grid grid-cols-3 gap-2 w-full">
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
+
+                {activeTab === "posts" && (
+                    <div className="grid grid-cols-3 gap-2 w-full">\
+                        {user.posts.map((post, index) => (
+                            <div
+                                key={index}
+                                className="bg-white rounded-xl p-0.5 w-full h-full overflow-hidden border border-gray-200 shadow"
+                            >
+                                <img
+                                    src={post.posterImage}
+                                    alt="profile image"
+                                    className="w-full h-full rounded-xl object-cover"
+                                />
+                            </div>
+                        ))}
                     </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                    <div className="bg-white rounded-xl p-0.5 border border-gray-200 shadow">
-                        <img
-                            src={user.profilePicture}
-                            alt="profile image"
-                            className="w-full h-full rounded-xl object-cover"
-                        />
-                    </div>
-                </div>
+                )}
+
+                {activeTab === "portfolio" && (
+                    <div className="text-center text-gray-700 font-bold">Portfolio</div>
+                )}
+
+                {activeTab === "saved" && (
+                    <div className="text-center text-gray-700 font-bold">Saved</div>
+                )}
             </div>
         </div>
     );

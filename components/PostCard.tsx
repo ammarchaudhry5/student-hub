@@ -7,13 +7,13 @@ interface PostCardProps {
     key: number;
     user: User
     post:Post
-    comment: Comment
+    // comment: Comment
 }
 
 export function PostCard({
                              post,
                              user,
-                             comment,
+                             // comment,
                          }: PostCardProps)
 {
 
@@ -77,11 +77,11 @@ export function PostCard({
                     </div>
                 </div>
 
-                <div>
+                <div className="h-72 w-full overflow-hidden bg-black my-3">
                     <img
                         src={post.posterImage}
                         alt="feed picture"
-                        className="object-cover border-1 border-gray-400 my-3"
+                        className="w-full h-full object-contain border border-gray-400"
                         onDoubleClick={() => console.log("post double clicked")}
                     />
                 </div>
