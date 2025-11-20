@@ -22,6 +22,8 @@ export function PostCard({
     const [isPostCommentModalOpen, setIsPostCommentModalOpen] = useState(false);
     const [saved, setSaved] = useState(false);
 
+    console.log("Post Card", post);
+
     const toggleLike = () => {
         setLiked(changed => !changed);
         console.log("Like toggled:", !liked);
@@ -33,7 +35,7 @@ export function PostCard({
     };
 
     return (
-        <div className="py-5">
+        <div className="py-5 relative" >
             <div className="flex flex-col py-5 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 rounded-t-3xl rounded-b-md ">
                 <div className="flex justify-between items-center mx-7">
                     <div className="flex items-center">
@@ -171,6 +173,7 @@ export function PostCard({
                             setIsPostCommentModalOpen(false)
                         }}
                         comments={post.comments}
+
                     >
                     </PostCommentModal>
                 ))}

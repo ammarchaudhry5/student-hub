@@ -34,7 +34,7 @@ export function PostCommentModal({ isOpen, onClose, comments }: PostCommentModal
     };
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={onClose} >
             <div className="p-4">
 
                 <h2 className="text-lg font-semibold mb-4">Comments</h2>

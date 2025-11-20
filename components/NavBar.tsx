@@ -3,10 +3,18 @@
 import React, {useState} from 'react';
 import { NavBarItem } from "@/components/NavBarItem";
 import { useRouter } from "next/navigation";
+import {Post} from "@/helpers/types";
+import CreatePostModal from "@/components/CreatePostModal";
+import {user} from "@/helpers/SampleData";
 
 const NavBar = () => {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState("home");
+    const [createOpen, setCreateOpen] = useState(false);
+
+    const handlePostCreated = (post: Post) => {
+        console.log("New Post Created:", post);
+    };
 
     return (
         <aside className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 text-black flex flex-col z-50 overflow-y-auto">
@@ -83,8 +91,7 @@ const NavBar = () => {
                         isActive={activeTab === "create"}
                         onClick={() => {
                             setActiveTab("create");
-                            router.push("/create");
-                            console.log("Active Tab Create");
+                            setCreateOpen(true);
                         }}
                     />
 
@@ -114,6 +121,19 @@ const NavBar = () => {
 
                 </ul>
             </nav>
+
+            <CreatePostModal
+                isOpen={createOpen}
+                onClose={() => {
+                    setActiveTab("home");
+                    router.push("/home");
+                    console.log("Active Tab Home");
+                    setCreateOpen(false)
+                }}
+                user={(user)}
+                onPostCreated={handlePostCreated}
+            />
+
         </aside>
     );
 };

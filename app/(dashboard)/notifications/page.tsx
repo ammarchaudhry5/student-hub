@@ -9,7 +9,7 @@ export default function NotificationsPage() {
     return (
         <div className="grid grid-cols-3 grid-rows-1 h-screen">
 
-            <div className="col-span-1 p-5 w-full bg-white text-black overflow-y-auto h-full">
+            <div className="col-span-1 p-5 w-full bg-white border-x-2 border-gray-300 text-black overflow-y-auto h-full">
                 <h1 className="text-3xl font-bold mb-5">Notifications</h1>
 
                 {notificationData.map((group, index) => (
@@ -26,7 +26,7 @@ export default function NotificationsPage() {
             </div>
 
             <div className="col-span-2 w-full flex justify-center items-center h-full">
-                <div className="px-5 w-[80%] border-2 rounded-t-3xl rounded-b-md border-gray-400">
+                <div className="px-5 w-[80%] border-2 rounded-t-3xl rounded-b-md border-gray-300">
                     <PostCard
                         key={1}
                         user={user}

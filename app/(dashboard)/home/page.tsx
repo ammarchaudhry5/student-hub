@@ -11,8 +11,9 @@ export default function FeedPage() {
     const router = useRouter();
     return (
         <div className="grid grid-cols-3 h-screen w-full">
+            {/*Center Feed Section*/}
             <div className="col-span-2 border-x-2 border-gray-300 bg-white">
-                <header className="flex px-6 my-3 gap-x-[4] overflow-x-scroll overflow-y-auto">
+                <div className="flex px-6 my-3 gap-x-[4] overflow-x-scroll overflow-y-auto">
                     {images.map((image, index) => (
                         <ActiveMember
                             key={index}
@@ -21,9 +22,8 @@ export default function FeedPage() {
                             onClick={() => console.log("Clicked user:", index)}
                         />
                     ))}
-                </header>
-
-                <main className="flex-1 px-25">
+                </div>
+                <div className="flex-1 px-25">
                     {posts.map((post, index) => (
                         <PostCard
                             key={index}
@@ -32,8 +32,9 @@ export default function FeedPage() {
                             // comment={comments[index]}
                         />
                     ))}
-                </main>
+                </div>
             </div>
+            {/*Right Side Suggestions*/}
             <div className="col-span-1 p-6 flex flex-col mx-10 items-center bg-white">
                 <div className="flex justify-between items-center w-full text-black">
                     <span className="font-semibold text-base">

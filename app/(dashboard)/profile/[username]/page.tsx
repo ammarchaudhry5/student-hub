@@ -1,7 +1,6 @@
 "use client";
 
 import React, {useState} from "react";
-import { User } from "@/helpers/types";
 import { user } from "@/helpers/SampleData";
 
 const Profile = () => {
@@ -25,7 +24,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <button
-                    className="mt-4 w-[80%] bg-gray-200 text-black py-1 rounded-lg border-2 border-gray-400 shadow-md hover:bg-gray-400 transition font-semibold"
+                    className="mt-4 w-[75%] bg-gray-200 text-black py-1 rounded-lg border-2 border-gray-400 shadow-md hover:bg-gray-400 transition font-semibold"
                     onClick={() => console.log("Edit profile clicked")}
                 >
                     Edit
@@ -50,16 +49,16 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className="mt-6 grid grid-cols-3 grid-rows-1">
-                    <div className="text-center bg-gray-50 px-4 py-3 mr-6 rounded-2xl shadow-sm">
+                <div className="mt-6 grid grid-cols-3 grid-rows-1 gap-4">
+                    <div className="text-center bg-gray-50 px-4 py-3 rounded-2xl shadow-sm">
                         <span className="font-bold">{user.followersCount}</span>
                         <p className="text-xs text-gray-500">Followers</p>
                     </div>
-                    <div className="text-center bg-gray-50 px-4 py-3 mr-6 rounded-2xl shadow-sm">
+                    <div className="text-center bg-gray-50 px-4 py-3 rounded-2xl shadow-sm">
                         <span className="font-bold">{user.followingsCount}</span>
                         <p className="text-xs text-gray-500">Following</p>
                     </div>
-                    <div className="text-center bg-gray-50 px-4 py-3 mr-6 rounded-2xl shadow-sm">
+                    <div className="text-center bg-gray-50 px-4 py-3 rounded-2xl shadow-sm">
                         <span className="font-bold">{user.postsCount}</span>
                         <p className="text-xs text-gray-500">Posts</p>
                     </div>
@@ -96,7 +95,7 @@ const Profile = () => {
 
 
                 {activeTab === "posts" && (
-                    <div className="grid grid-cols-3 gap-2 w-full">\
+                    <div className="grid grid-cols-3 gap-2 w-full">
                         {user.posts.map((post, index) => (
                             <div
                                 key={index}
