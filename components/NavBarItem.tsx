@@ -11,7 +11,7 @@ interface NavBarItemProps {
 export function NavBarItem({ activeIcon, inactiveIcon, title, isActive, onClick }: NavBarItemProps) {
     return (
         <button
-            className="mx-2 p-2 rounded hover:bg-green-200"
+            className="mx-2 py-2 px-5 transition-all duration-300 hover:scale-110 hover:shadow-2xl rounded-md hover:bg-gradient-to-r hover:from-green-200 hover:to-blue-300"
             onClick={onClick}
         >
             <div className="flex items-center">

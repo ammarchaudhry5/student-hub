@@ -4,7 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { ActiveMember } from "@/components/ActiveMember";
 import { PostCard } from "@/components/PostCard";
-import {images, user, posts, comments} from "@/helpers/SampleData";
+import {images, user, posts, comments} from "@/helpers/sampleData";
 import {SuggestedUserTile} from "@/components/SuggestedUserTile";
 
 export default function FeedPage() {

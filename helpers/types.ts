@@ -72,3 +72,47 @@ export interface NotificationGroup {
     title: string;
     list: NotificationItem[];
 }
+
+export interface Message {
+    id: number;
+    senderId: User;
+    receiverId: User;
+    content: string;
+    timestamp: string;
+    isRead: boolean;
+    type: 'text' | 'image' | 'story-reply' | 'reaction';
+    imageUrl?: string;
+    storyReply?: {
+        storyOwner: string;
+        storyImage: string;
+    };
+}
+
+export interface Conversation {
+    id: number;
+    userId: User;
+    senderUsername: User;
+    senderName: User;
+    senderUserProfilePicture: User;
+    receiverUsername: User;
+    receiverName: User;
+    receiverUserProfilePicture: User;
+    lastMessage: string;
+    messages: Message[];
+    timestamp: string;
+    isOnline: boolean;
+    unreadCount: number;
+    isMuted: boolean;
+    hasAttachment?: boolean;
+    reactionEmoji?: string;
+}
+
+export interface Story {
+    id: number;
+    userId: number;
+    username: string;
+    profilePicture: string;
+    hasNew: boolean;
+    isNote?: boolean;
+    noteText?: string;
+}

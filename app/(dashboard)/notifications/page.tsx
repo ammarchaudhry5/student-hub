@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import {user, posts, notificationData} from "@/helpers/SampleData";
+import {user, posts, notificationData} from "@/helpers/sampleData";
 import {NotificationTile} from "@/components/NotificationTile";
 import {PostCard} from "@/components/PostCard";
 

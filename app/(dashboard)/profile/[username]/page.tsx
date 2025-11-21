@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useState} from "react";
-import { user } from "@/helpers/SampleData";
+import { user } from "@/helpers/sampleData";
 
 const Profile = () => {
     const [activeTab, setActiveTab] = useState<"posts" | "portfolio" | "saved">("posts");

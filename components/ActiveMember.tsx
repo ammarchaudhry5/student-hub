@@ -7,6 +7,7 @@ interface ActiveMemberProps {
 }
 
 export function ActiveMember({userImage, isActive, onClick}: ActiveMemberProps) {
+
     return <div className="relative w-24 h-24 min-w-24 min-h-24 mx-2 my-3 snap-center">
         <div onClick={onClick} className="border-3 border-blue-500 rounded-full w-full h-full flex items-center justify-center overflow-hidden">
             <img

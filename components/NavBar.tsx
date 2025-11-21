@@ -5,7 +5,7 @@ import { NavBarItem } from "@/components/NavBarItem";
 import { useRouter } from "next/navigation";
 import {Post} from "@/helpers/types";
 import CreatePostModal from "@/components/CreatePostModal";
-import {user} from "@/helpers/SampleData";
+import {user} from "@/helpers/sampleData";
 
 const NavBar = () => {
     const router = useRouter();

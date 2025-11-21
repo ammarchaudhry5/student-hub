@@ -85,18 +85,18 @@ export function ProfilePreview({
             </div>
             <div className="">
 
-                <div className="flex justify-around bg-black">
-                    <span className={`cursor-pointer px-16 py-2 rounded-lg text-lg font-bold ${
-                        activeTab === "posts" ? "bg-white" : "hover:bg-gray-200 border-2 border-gray-400"
-                    }`}
+                <div className="flex justify-around bg-indigo-800 py-2">
+                    <span className={`cursor-pointer rounded-lg font-bold transition-all duration-300  hover:scale-110 hover:shadow-2xl
+                     ${activeTab === "posts" ? "text-white text-2xl" : "text-gray-300 text-lg"}
+                    `}
                           onClick={() => setActiveTab("posts")}
                     >
                         Posts
                     </span>
                     <span
-                        className={`cursor-pointer px-16 py-2 rounded-lg text-lg font-bold ${
-                            activeTab === "portfolio" ? "bg-gray-200" : "hover:bg-gray-200 border-2 border-gray-400"
-                        }`}
+                        className={`cursor-pointer rounded-lg font-bold transition-all duration-300  hover:scale-110 hover:shadow-2xl
+                         ${activeTab === "portfolio" ? "text-white text-2xl" : "text-gray-300 text-lg"}
+                        `}
                         onClick={() => setActiveTab("portfolio")}
                     >
                         Portfolio

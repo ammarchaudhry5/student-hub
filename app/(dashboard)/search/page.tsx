@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import {user} from "@/helpers/SampleData";
+import {user} from "@/helpers/sampleData";
 import {ProfilePreview} from "@/components/ProfilePreview";
 
 const recentSearches = [
@@ -79,8 +79,6 @@ export default function Search() {
                         {...recentSearches}
                     />
                 </div>
-
-
             </div>
         </div>
     );
