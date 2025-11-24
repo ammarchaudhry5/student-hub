@@ -37,7 +37,7 @@ export function PostCommentModal({ isOpen, onClose, comments }: PostCommentModal
         <Modal isOpen={isOpen} onClose={onClose} >
             <div className="p-4">
 
-                <h2 className="text-lg font-semibold mb-4">Comments</h2>
+                <h2 className="text-lg font-semibold pb-4">Comments</h2>
 
                 <div className="max-h-[450px] overflow-y-scroll pr-3">
 

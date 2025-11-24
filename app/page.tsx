@@ -7,7 +7,7 @@ export default function LandingPage() {
     const router = useRouter();
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-200 to-indigo-300 flex flex-col justify-center items-center text-center p-6">
+        <div className="min-h-screen bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 flex flex-col justify-center items-center text-center p-6">
             <img src="/images/only-logo.png" alt="Logo" className="w-24 h-24 mb-6" />
             <h1 className="text-5xl font-bold text-indigo-700 mb-4">Welcome to Student Hub</h1>
             <p className="text-gray-700 text-lg mb-8 max-w-xl">

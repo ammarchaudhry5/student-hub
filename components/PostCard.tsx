@@ -36,8 +36,8 @@ export function PostCard({
 
     return (
         <div className="py-5 relative" >
-            <div className="flex flex-col py-5 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 rounded-t-3xl rounded-b-md ">
-                <div className="flex justify-between items-center mx-7">
+            <div className="flex flex-col pt-4 pb-2 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 rounded-t-3xl rounded-b-md ">
+                <div className="flex px-4 pb-3 justify-between items-center">
                     <div className="flex items-center">
                         <div className="relative w-12 h-12">
                             <div
@@ -79,104 +79,106 @@ export function PostCard({
                     </div>
                 </div>
 
-                <div className="h-72 w-full overflow-hidden bg-black my-3">
+                <div className="h-72 w-full overflow-hidden bg-black ">
                     <img
                         src={post.posterImage}
                         alt="feed picture"
-                        className="w-full h-full object-contain border border-gray-400"
+                        className="w-full h-full object-contain"
                         onDoubleClick={() => console.log("post double clicked")}
                     />
                 </div>
 
-                <div className="flex justify-between mx-7">
-                    <div className="flex gap-5">
-                        <img
-                            src={liked ? "/like-filled.svg" : "/like-outlined.svg"}
-                            alt="like icon"
-                            onClick={toggleLike}
-                            className="h-8 w-8 cursor-pointer"
-                        />
+                <div className={"px-4  pt-3"}>
+                    <div className="flex justify-between">
+                        <div className="flex gap-5">
+                            <img
+                                src={liked ? "/like-filled.svg" : "/like-outlined.svg"}
+                                alt="like icon"
+                                onClick={toggleLike}
+                                className="h-8 w-8 cursor-pointer"
+                            />
 
-                        <img
-                            src="/comment-outlined.svg"
-                            alt="comment icon"
-                            onClick={() => {
-                                console.log("post comment button clicked")
-                                setIsPostCommentModalOpen(true)
-                            }}
-                            className="h-7 w-7 cursor-pointer"
-                        />
+                            <img
+                                src="/comment-outlined.svg"
+                                alt="comment icon"
+                                onClick={() => {
+                                    console.log("post comment button clicked")
+                                    setIsPostCommentModalOpen(true)
+                                }}
+                                className="h-7 w-7 cursor-pointer"
+                            />
 
-                        <img
-                            src="/share-outlined.svg"
-                            alt="share icon"
-                            onClick={() => console.log("post share button clicked")}
-                            className="h-7 w-7 cursor-pointer"
-                        />
+                            <img
+                                src="/share-outlined.svg"
+                                alt="share icon"
+                                onClick={() => console.log("post share button clicked")}
+                                className="h-7 w-7 cursor-pointer"
+                            />
+                        </div>
+
+                        <div className="flex gap-5">
+                            <img
+                                src={saved ? "/save-filled.svg" : "/save-outlined.svg"}
+                                alt="save icon"
+                                onClick= {toggleSave}
+                                className="h-7 w-7 cursor-pointer"
+                            />
+                        </div>
                     </div>
 
-                    <div className="flex gap-5">
-                        <img
-                            src={saved ? "/save-filled.svg" : "/save-outlined.svg"}
-                            alt="save icon"
-                            onClick= {toggleSave}
-                            className="h-7 w-7 cursor-pointer"
-                        />
+                    <div className="flex py-0.5">
+                        <p className="text-base font-semibold text-black">{post.likesCount} likes</p>
                     </div>
-                </div>
 
-                <div className="flex my-1 mx-7">
-                    <p className="text-base font-semibold text-black">{post.likesCount} likes</p>
-                </div>
+                    <div className="flex py-0.5">
+                        <p className="text-base font-semibold text-black">{post.username}</p>
+                        <p className="text-base font-medium text-black ml-2">{post.description}</p>
+                    </div>
 
-                <div className="flex my-1 mx-7">
-                    <p className="text-base font-semibold text-black">{post.username}</p>
-                    <p className="text-base font-medium text-black ml-2">{post.description}</p>
-                </div>
-
-                <div
-                    className="flex my-1 mx-7 cursor-pointer"
-                    onClick={() => {
-                        console.log("post comment button clicked")
-                        setIsPostCommentModalOpen(true)
-                    }}
-                >
-                    <p className="text-sm font-normal text-gray-600">
-                        View all {post.commentsCount} comments
-                    </p>
-                </div>
-
-                <div className="flex my-1 mx-7">
-                    <p
-                        className="text-sm font-normal text-gray-600 cursor-pointer"
+                    <div
+                        className="flex py-0.5 cursor-pointer"
                         onClick={() => {
                             console.log("post comment button clicked")
                             setIsPostCommentModalOpen(true)
                         }}
                     >
-                        Add a comment...
-                    </p>
-                </div>
-                <PostDetailModal
-                    isOpen={isPostDetailModalOpen}
-                    onClose={() => {
-                        console.log("close post details modal");
-                        setIsPostDetailModalOpen(false)
-                    }}
-                ></PostDetailModal>
-                {post.comments.map((comment, index) => (
-                    <PostCommentModal
-                        key={index}
-                        isOpen={isPostCommentModalOpen}
-                        onClose={() => {
-                            console.log("close post comment modal");
-                            setIsPostCommentModalOpen(false)
-                        }}
-                        comments={post.comments}
+                        <p className="text-sm font-normal text-gray-600">
+                            View all {post.commentsCount} comments
+                        </p>
+                    </div>
 
-                    >
-                    </PostCommentModal>
-                ))}
+                    <div className="flex py-0.5">
+                        <p
+                            className="text-sm font-normal text-gray-600 cursor-pointer"
+                            onClick={() => {
+                                console.log("post comment button clicked")
+                                setIsPostCommentModalOpen(true)
+                            }}
+                        >
+                            Add a comment...
+                        </p>
+                    </div>
+                    <PostDetailModal
+                        isOpen={isPostDetailModalOpen}
+                        onClose={() => {
+                            console.log("close post details modal");
+                            setIsPostDetailModalOpen(false)
+                        }}
+                    ></PostDetailModal>
+                    {post.comments.map((comment, index) => (
+                        <PostCommentModal
+                            key={index}
+                            isOpen={isPostCommentModalOpen}
+                            onClose={() => {
+                                console.log("close post comment modal");
+                                setIsPostCommentModalOpen(false)
+                            }}
+                            comments={post.comments}
+
+                        >
+                        </PostCommentModal>
+                    ))}
+                </div>
             </div>
         </div>
     );

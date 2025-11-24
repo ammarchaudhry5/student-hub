@@ -14,6 +14,8 @@ export const images: string[] = [
     "/images/user-3.jpg",
     "/images/user-2.jpg",
     "/images/user-3.jpg",
+    "/images/user-2.jpg",
+    "/images/user-3.jpg",
 ];
 
 

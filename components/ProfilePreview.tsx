@@ -13,8 +13,7 @@ export function ProfilePreview({
                                    user}: ProfilePreviewProps)
 {
     const [activeTab, setActiveTab] = useState<
-        "posts" | "portfolio"
-        // | "saved"
+        "posts" | "portfolio" | "saved"
     >("posts");
     return (
         <div className="flex flex-col h-full w-full bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 text-gray-800">
@@ -86,9 +85,10 @@ export function ProfilePreview({
             <div className="">
 
                 <div className="flex justify-around bg-indigo-800 py-2">
-                    <span className={`cursor-pointer rounded-lg font-bold transition-all duration-300  hover:scale-110 hover:shadow-2xl
-                     ${activeTab === "posts" ? "text-white text-2xl" : "text-gray-300 text-lg"}
-                    `}
+                    <span className=
+                              {`cursor-pointer rounded-lg font-bold transition-all duration-300  hover:scale-110 hover:shadow-2xl
+                              ${activeTab === "posts" ? "text-white text-2xl" : "text-gray-300 text-lg"}
+                              `}
                           onClick={() => setActiveTab("posts")}
                     >
                         Posts

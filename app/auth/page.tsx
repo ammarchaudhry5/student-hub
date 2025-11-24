@@ -58,7 +58,7 @@ export default function StudentHubAuth() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-4">
             <div className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-                <div className="w-full md:w-1/2 bg-gradient-to-br from-blue-200 via-blue-400 to-indigo-600 p-12 flex flex-col justify-center">
+                <div className="w-full md:w-1/2 bg-white p-12 flex flex-col justify-center">
                     <div className="flex flex-col justify-center items-center text-center gap-4 mb-8">
                         <div className="flex items-center gap-2">
                             <div className="w-10 h-10 p-1 bg-white rounded-lg flex items-center justify-center">
@@ -77,7 +77,7 @@ export default function StudentHubAuth() {
                             placeholder="Email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full px-6 py-4 rounded-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                            className="w-full px-6 py-4 rounded-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 border-2 border-blue-300"
                         />
 
                         <input
@@ -127,7 +127,7 @@ export default function StudentHubAuth() {
                     </div>
                 </div>
 
-                <div className="w-full md:w-1/2 bg-gradient-to-br from-gray-50 to-blue-50 p-12 flex flex-col justify-center items-center relative">
+                <div className="w-full md:w-1/2 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 p-12 flex flex-col justify-center items-center relative">
                     <div className="mb-8 flex flex-col justify-center items-center">
                         <div className="flex items-center gap-2 mb-2">
                             <img src="/images/only-logo.png" alt="Logo" width={60} />

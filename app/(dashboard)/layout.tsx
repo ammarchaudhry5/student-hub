@@ -25,7 +25,7 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <div className="min-h-screen ml-64 bg-white flex">
+      <div className="min-h-screen lg:ml-64 bg-white flex">
           <NavBar></NavBar>
           {children}
       </div>
