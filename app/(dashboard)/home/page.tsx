@@ -13,7 +13,8 @@ export default function FeedPage() {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 h-screen w-full bg-white">
 
-            <header className="lg:hidden xl:hidden col-span-1 lg:col-span-3 xl:col-span-3 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 border-b-2 border-gray-300 shadow-black z-50 ">
+            {/* Mobile Header */}
+            <header className="lg:hidden xl:hidden col-span-1 bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 border-b-2 border-gray-300 shadow-black z-50 ">
                 <div className="p-3">
                     <button
                         onClick={() => router.push("/home")}
@@ -27,6 +28,7 @@ export default function FeedPage() {
                 </div>
             </header>
 
+            {/* Middle Feed Section */}
             <div className="col-span-1 lg:col-span-2 xl:col-span-2 border-gray-300 border-x-0 lg:border-x-2 bg-white overflow-y-auto">
 
                 <div className="flex px-6 gap-x-4 overflow-x-scroll no-scrollbar py-4">
@@ -49,9 +51,12 @@ export default function FeedPage() {
                         />
                     ))}
                 </div>
+
+                {/* FIX: keep this space INSIDE the middle column */}
+                <div className="h-16"></div>
             </div>
 
-            <div className={"h-16"}></div>
+            {/* Right Side - Hidden on mobile/tablet */}
             <div className="hidden lg:flex xl:flex flex-col p-6 mx-4 bg-white">
                 <div className="flex justify-between items-center w-full text-black mb-4">
                     <span className="font-semibold text-lg">Suggested for you</span>

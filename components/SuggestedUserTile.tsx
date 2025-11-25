@@ -12,7 +12,7 @@ export function SuggestedUserTile({ user }: SuggestedUserTileProps) {
 
             <div className="flex items-center gap-3">
 
-                <div className="w-12 h-12">
+                <div className="w-12 min-w-12 h-12 min-h-12">
                     <div
                         onClick={() => console.log("user profile img clicked")}
                         className="border-2 border-blue-500 rounded-full w-full h-full overflow-hidden cursor-pointer"

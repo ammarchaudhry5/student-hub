@@ -22,17 +22,18 @@ const recentSearches = [
 export default function Search() {
     return (
         <div className="grid xl:grid-cols-5 lg:grid-cols-5 grid-cols-1 w-full h-screen bg-white relative">
-            {/* Fixed header for mobile */}
+
+            {/* Fixed Header (Mobile Only) */}
             <header className="fixed block lg:hidden w-full bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 border-b-2 border-gray-300 shadow z-10">
                 <div className="px-5 py-6">
                     <h1 className="text-3xl font-bold">Search</h1>
                 </div>
             </header>
 
-            {/* Left column: Search + Recent */}
+            {/* LEFT COLUMN */}
             <div
                 className="lg:col-span-2 xl:col-span-2 w-full border-x-2 border-gray-300 text-black overflow-y-auto"
-                style={{ height: '100vh', paddingTop: '72px' }} // adjust top padding for fixed header
+                style={{ height: "100vh", paddingTop: "72px" }}
             >
                 <div className="flex items-center p-5">
                     <div className="flex items-center bg-gray-100 w-full px-4 py-3 rounded-xl">
@@ -50,7 +51,7 @@ export default function Search() {
                     <button className="text-sm text-blue-400 hover:underline">Clear all</button>
                 </div>
 
-                <div className="space-y-4 px-5">
+                <div className="space-y-4 px-5 pb-10">
                     {recentSearches.map((item) => (
                         <div key={item.id} className="flex items-center justify-between">
                             <div className="flex justify-between w-full items-center gap-3">
@@ -71,17 +72,14 @@ export default function Search() {
                                     </div>
                                 </div>
 
-                                <button className="text-gray-600 hover:text-black text-2xl">
-                                    x
-                                </button>
+                                <button className="text-gray-600 hover:text-black text-2xl">x</button>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className={"h-20"}></div>
 
-            {/* Right column: Profile preview */}
+            {/* RIGHT COLUMN (Desktop Only) */}
             <div className="hidden lg:flex xl:flex lg:col-span-3 xl:col-span-3 h-full px-10 py-10 w-full bg-white">
                 <div className="border-2 rounded-3xl border-gray-300 flex items-center justify-center w-full h-full overflow-hidden">
                     <ProfilePreview user={user} />
