@@ -92,7 +92,7 @@ const Profile = () => {
                                 className={`
                                     cursor-pointer rounded-lg uppercase tracking-wide
                                     transition-all duration-300 hover:scale-110 hover:shadow-xl
-                                    ${activeTab === tab ? "text-white text-xl font-bold" : "text-gray-300 text-lg font-semibold"}
+                                    ${activeTab === tab ? "text-white text-xl font-bold" : "text-gray-300 text-base font-semibold"}
                                 `}
                             >
                                 {tab}

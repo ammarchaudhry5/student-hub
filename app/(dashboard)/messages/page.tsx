@@ -1,28 +1,35 @@
 'use client'
 
 import React, { useState } from 'react';
-import {Conversation} from "@/helpers/types";
-import {conversations, images, messages, user,} from "@/helpers/sampleData";
-import {ConversationItem} from "@/components/ConversationItem";
-import {MessageBubble} from "@/components/MessageBubble";
-import {ActiveMember} from "@/components/ActiveMember";
+import { Conversation } from "@/helpers/types";
+import { conversations, images, messages, user } from "@/helpers/sampleData";
+import { ConversationItem } from "@/components/ConversationItem";
+import { MessageBubble } from "@/components/MessageBubble";
+import { ActiveMember } from "@/components/ActiveMember";
+import {ChatView} from "@/components/ChatView";
 
 export default function MessagesPage() {
-    const [activeConversation, setActiveConversation] = useState<Conversation>(conversations[3]);
+    const [activeConversation, setActiveConversation] = useState<Conversation | null>(null);
     const [messageInput, setMessageInput] = useState('');
 
-    return (
-        <div className="grid grid-cols-5 w-full h-screen bg-white text-black overflow-hidden">
-            {/* LEFT SIDEBAR */}
-            <div className="col-span-2 w-full border-x-2 border-gray-300 overflow-y-auto">
-                <div className="p-4">
-                    <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-2">
-                            <h1 className="text-xl font-semibold">{user.username}</h1>
-                        </div>
-                    </div>
+    const isMobile = typeof window !== "undefined" ? window.innerWidth < 1024 : false;
 
-                    <div className="flex items-center">
+    return (
+        <div className="grid xl:grid-cols-5 lg:grid-cols-5 grid-cols-1 w-full h-screen bg-white relative">
+
+            {/* MOBILE HEADER */}
+            <header className="fixed block lg:hidden w-full bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 border-b-2 border-gray-300 shadow z-10">
+                <div className="px-5 py-6">
+                    <h1 className="text-3xl font-bold">{user.username}</h1>
+                </div>
+            </header>
+
+            {/* LEFT COLUMN */}
+            <div className={`col-span-2 w-full border-x-2 border-gray-300 lg:py-3  py-20 overflow-hidden ${activeConversation && isMobile ? "hidden" : "block"}`}>
+
+                <div className="h-full flex flex-col">
+                    {/* Search */}
+                    <div className="p-4">
                         <div className="flex items-center bg-gray-100 w-full px-4 py-3 rounded-xl">
                             <img src="/search-outlined-icon.svg" className="h-6" />
                             <input
@@ -32,95 +39,73 @@ export default function MessagesPage() {
                             />
                         </div>
                     </div>
-                </div>
-                <div className={"px-2"}>
-                    <div className="flex px-5 gap-x-4 overflow-x-scroll">
-                        {images.map((image, index) => (
-                            <ActiveMember
-                                key={index}
-                                userImage={image}
-                                isActive={index % 2 === 0}
-                                onClick={() => console.log("Clicked user:", index)}
+
+                    {/* Active Members */}
+                    <div className="px-2">
+                        <div className="flex px-5 gap-x-4 overflow-x-scroll">
+                            {images.map((image, index) => (
+                                <ActiveMember
+                                    key={index}
+                                    userImage={image}
+                                    isActive={index % 2 === 0}
+                                    onClick={() => console.log("Clicked user:", index)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Tabs */}
+                    <div className="flex border-b border-gray-400 mt-3">
+                        <button className="flex-1 px-4 text-black text-lg font-semibold border-b-2 border-white">
+                            Messages
+                        </button>
+                        <button className="flex-1 px-4 py-3 text-gray-400 font-medium hover:text-gray-900">
+                            Requests
+                        </button>
+                    </div>
+
+                    {/* Conversations list with scroll */}
+                    <div className="flex-1 overflow-y-auto">
+                        {conversations.map((conv) => (
+                            <ConversationItem
+                                key={conv.id}
+                                conversation={conv}
+                                isActive={activeConversation?.id === conv.id}
+                                onClick={() => setActiveConversation(conv)}
                             />
                         ))}
                     </div>
                 </div>
-
-                <div className="flex border-b border-gray-400 mt-3">
-                    <button className="flex-1 px-4 text-black text-lg font-semibold border-b-2 border-white">
-                        Messages
-                    </button>
-                    <button className="flex-1 px-4 py-3 text-gray-400 font-medium hover:text-gray-900">
-                        Requests
-                    </button>
-                </div>
-
-                <div className="flex-1 overflow-y-auto ">
-                    {conversations.map((conv) => (
-                        <ConversationItem
-                            key={conv.id}
-                            conversation={conv}
-                            isActive={conv.id === activeConversation.id}
-                            onClick={() => setActiveConversation(conv)}
-                        />
-                    ))}
-                </div>
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className="col-span-3 h-full w-full bg-white relative overflow-hidden flex flex-col">
-                <div className="flex items-center justify-between bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300 px-6 py-3 border-b border-gray-300">
-                    <div className="flex items-center gap-3">
-                        <img
-                            src={activeConversation.senderUserProfilePicture.profilePicture}
-                            alt={activeConversation.senderName.name}
-                            className="w-10 h-10 rounded-full object-cover"
-                        />
-                        <div>
-                            <h2 className="text-black font-medium">{activeConversation.senderName.name}</h2>
-                            <p className="text-gray-400 text-sm">{activeConversation.senderUsername.username}</p>
-                        </div>
+            {/* RIGHT SIDE (DESKTOP) */}
+            <div className="hidden lg:flex xl:flex lg:col-span-3 xl:col-span-3 h-screen w-full bg-white">
+                {activeConversation ? (
+                    <ChatView
+                        activeConversation={activeConversation}
+                        messageInput={messageInput}
+                        setMessageInput={setMessageInput}
+                    />
+                ) : (
+                    <div className="flex items-center justify-center w-full text-gray-500">
+                        Select a conversation
                     </div>
-
-                    <div className="flex items-center gap-4">
-                        <img src="/phone-outlined.svg" className="h-8 w-6" />
-                        <img src="/video-call-outlined.svg" className="h-8 w-8" />
-                        <img src="/info-outlined.svg" className="h-6 w-6" />
-                    </div>
-                </div>
-
-                <div className="flex-1 overflow-y-auto px-6 py-4">
-                    {activeConversation.id === 4 ? (
-                        messages.map((msg) => (
-                            <MessageBubble
-                                key={msg.id}
-                                message={msg}
-                                isOwn={msg.senderId.id === 1}
-                            />
-                        ))
-                    ) : (
-                        <div className="flex items-center justify-center h-full text-gray-500">
-                            <p>No messages yet</p>
-                        </div>
-                    )}
-                </div>
-
-                <div className="px-3 py-3 mx-5 mb-5 border rounded-xl border-gray-800 bg-white">
-                    <div className="flex items-center gap-3">
-                        <img src="/emoji-outline.svg" className="h-6 w-6" />
-                        <input
-                            type="text"
-                            placeholder="Message..."
-                            value={messageInput}
-                            onChange={(e) => setMessageInput(e.target.value)}
-                            className="flex-1 bg-transparent text-black placeholder-gray-500 focus:outline-none"
-                        />
-                        <img src="/share-outlined.svg" className="h-6 w-6" />
-                        <img src="/photo-outlined.svg" className="h-6 w-6" />
-                        <img src="/mic-outlined.svg" className="h-6 w-6" />
-                    </div>
-                </div>
+                )}
             </div>
+
+            {/* MOBILE CHAT FULL SCREEN */}
+            {activeConversation && isMobile && (
+                <div className="block lg:hidden absolute top-0 left-0 w-full h-full bg-white z-20">
+                    <ChatView
+                        activeConversation={activeConversation}
+                        messageInput={messageInput}
+                        setMessageInput={setMessageInput}
+                        mobileBack={() => setActiveConversation(null)}
+                    />
+                </div>
+            )}
         </div>
     );
 }
+
+

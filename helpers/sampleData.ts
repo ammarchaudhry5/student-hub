@@ -335,6 +335,39 @@ export const posts: Post[] = [
 
 export const notificationData: NotificationGroup[] = [
     {
+        title: "Today",
+        list: [
+            {
+                id: 1,
+                users: [users[1], users[2]],
+                action: "liked your post",
+                time: "3h",
+                previewImage: "/images/user-1.jpg",
+            },
+            {
+                id: 2,
+                users: [users[2]],
+                action: "liked your comment: Awesome",
+                time: "3h",
+                previewImage: "/images/user-1.jpg",
+            },
+            {
+                id: 3,
+                users: [users[1], users[2]],
+                action: "liked your post",
+                time: "3h",
+                previewImage: "/images/user-1.jpg",
+            },
+            {
+                id: 4,
+                users: [users[2]],
+                action: "liked your comment: Awesome",
+                time: "3h",
+                previewImage: "/images/user-1.jpg",
+            },
+        ],
+    },
+    {
         title: "This week",
         list: [
             {
@@ -639,5 +672,55 @@ export const conversations: Conversation[] = [
         receiverName: users[1],
         receiverUserProfilePicture: users[1],
         messages: buildMessagesForConversation(users[4], user, 50)
-    }
+    },
+    {
+        id: 7,
+        userId: users[2],
+        lastMessage: "Wah wah wah",
+        timestamp: "1d",
+        isOnline: false,
+        unreadCount: 0,
+        isMuted: true,
+        senderUsername: users[2],
+        senderName: users[2],
+        senderUserProfilePicture: users[2],
+        receiverUsername: users[1],
+        receiverName: users[1],
+        receiverUserProfilePicture: users[1],
+        messages: buildMessagesForConversation(users[2], user, 50)
+    },
+    {
+        id: 8,
+        userId: users[3],
+        lastMessage: "Reacted 😊 to your message",
+        timestamp: "1d",
+        isOnline: false,
+        unreadCount: 0,
+        isMuted: false,
+        reactionEmoji: '😊',
+        senderUsername: users[3],
+        senderName: users[3],
+        senderUserProfilePicture: users[3],
+        receiverUsername: users[1],
+        receiverName: users[1],
+        receiverUserProfilePicture: users[1],
+        messages: buildMessagesForConversation(users[3], user, 50)
+    },
+    {
+        id: 9,
+        userId: users[4],
+        lastMessage: "Reacted 😊 to your message",
+        timestamp: "1d",
+        isOnline: true,
+        unreadCount: 1,
+        isMuted: true,
+        reactionEmoji: '😊',
+        senderUsername: users[4],
+        senderName: users[4],
+        senderUserProfilePicture: users[4],
+        receiverUsername: users[1],
+        receiverName: users[1],
+        receiverUserProfilePicture: users[1],
+        messages: buildMessagesForConversation(users[4], user, 50)
+    },
 ];
