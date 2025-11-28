@@ -18,7 +18,7 @@ export default function NotificationsPage() {
 
             {/* LEFT COLUMN */}
 
-            <div className="lg:col-span-2 xl:col-span-2 w-full border-x-2 border-gray-300 text-black pb-20 pt-25 overflow-y-auto">
+            <div className="lg:col-span-2 xl:col-span-2 w-full border-x-2 border-gray-300 text-black pb-20 pt-25 px-4 overflow-y-auto">
                 {/*<h1 className="text-3xl font-bold mb-5">Notifications</h1>*/}
 
                 {notificationData.map((group, index) => (

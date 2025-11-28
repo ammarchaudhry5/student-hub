@@ -82,7 +82,7 @@ const Profile = () => {
 
             {/* RIGHT SIDE CONTENT */}
             <div className="lg:col-span-2 p-5">
-                <div className="p-4 lg:my-10 border-2 border-gray-300 rounded-xl bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300">
+                <div className="p-4 border-2 border-gray-300 rounded-xl bg-gradient-to-br from-blue-300 via-green-100 to-indigo-300">
 
                     <div className="flex justify-around bg-black py-2 rounded-lg border-2 border-gray-300 shadow mb-6">
                         {["posts", "portfolio", "saved"].map((tab) => (
