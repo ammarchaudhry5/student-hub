@@ -5,110 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2da58544-e8dd-46b6-91d6-5025a91016c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/back-end/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/student-hub.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/create/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/home/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/messages/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/notifications/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/profile/[username]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/reels/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(dashboard)/search/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/auth/login/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/auth/register/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/notifications/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/posts/[id]/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/posts/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/example/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ActiveMember.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ChatView.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ConversationItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CreatePostModal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Divider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MessageBubble.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Modal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavBarItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NotificationTile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostCommentModal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PostDetailModal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProfilePreview.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/StoryCircle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SuggestedUserTile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/xyz.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/sampleData.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/sampleMessages.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/auth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/prisma.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/scheme.prisma" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/arrow-back-rounded-ios.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/chat-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/chat-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/comment-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/create-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/create-outlined-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/emoji-outline.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/only-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/sign-up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/student-hub.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/user-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/user-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/user-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/info-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/like-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/like-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mic-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mute-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/notification-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/notification-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/person-filled-gray.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/phone-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/photo-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/profile-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/profile-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/save-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/save-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/search-filled-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/search-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/search-outlined-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/share-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/three-dots-horizontal-black-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/three-dots-horizontal-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tv-filled.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tv-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/video-call-outlined.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/auth.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/comment.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/message.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/post.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/user.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/lib/prisma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/auth.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/comment.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/message.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/post.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/user.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/comment.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/message.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/post.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/prisma.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,41 +62,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/next-js/student-hub/app/home",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.Next.js: server-side.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "D:\\next-js\\student-hub\\back-end\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/next-js/student-hub/app/home&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\next-js\\student-hub\\back-end\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\next-js\student-hub\app\home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\next-js\student-hub\back-end\prisma" />
+      <recent name="D:\next-js\student-hub\back-end\prisma\src" />
       <recent name="D:\next-js\student-hub\back-end\src" />
       <recent name="D:\next-js\student-hub\back-end" />
       <recent name="D:\next-js\student-hub\app" />
-      <recent name="D:\next-js\student-hub\app\(dashboard)" />
-      <recent name="D:\next-js\student-hub\app\(hello)" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -223,7 +145,8 @@
       <workItem from="1764329229806" duration="596000" />
       <workItem from="1764343017094" duration="214000" />
       <workItem from="1764343262842" duration="1295000" />
-      <workItem from="1764344741521" duration="2314000" />
+      <workItem from="1764344741521" duration="2563000" />
+      <workItem from="1764592187182" duration="15189000" />
     </task>
     <servers />
   </component>
