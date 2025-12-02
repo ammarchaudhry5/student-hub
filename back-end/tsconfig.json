@@ -1,28 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2023", // Needed for Prisma v7
-    "module": "ESNext", // Needed for ES module syntax
-    "moduleResolution": "node", // For Node imports
-    "lib": [
-      "ES2023"
-    ], // Supports modern JS features
-    "outDir": "dist",
-    "rootDir": ".",
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
-    "esModuleInterop": true, // Allows default import of CommonJS modules
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "node"
-    ],
-    "ignoreDeprecations": "6.0" // Avoid warnings for Node 18+ deprecations
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowImportingTsExtensions": true
   },
-  "include": [
-    "src",
-    "prisma/generated"
-  ],
-  "ts-node": {
-    "esm": true
-  }
+  "include": ["src"]
 }

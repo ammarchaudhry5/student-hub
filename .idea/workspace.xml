@@ -5,31 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2da58544-e8dd-46b6-91d6-5025a91016c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/auth.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/comment.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/message.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/post.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/user.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/lib/prisma.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/routes/auth.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/routes/comment.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/routes/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/routes/message.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/routes/post.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/routes/user.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/services/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/services/comment.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/services/message.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/services/post.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/services/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/eslint.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Comment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/CommentReplies.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Conversations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Followers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Message.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/NotificationUser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Notifications.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/Story.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/entities/User.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/prisma.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/browser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/client.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/commonInputTypes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/enums.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/internal/class.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/internal/prismaNamespace.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/internal/prismaNamespaceBrowser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Comment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/CommentReply.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Conversation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/ConversationParticipant.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Follow.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Message.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Notification.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/NotificationUser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Post.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/SavedPost.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/Story.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/models/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/generated/query_engine-windows.dll.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/prisma/schema.prisma" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/controllers/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/controllers/comment.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/controllers/message.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/controllers/post.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/controllers/user.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/lib/prisma.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/auth.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/comment.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/message.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/post.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/user.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/config/dbConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/services/comment.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/services/message.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/services/post.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/services/user.service.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,41 +93,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/next-js/student-hub/app/home&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.Next.js: server-side.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\next-js\\student-hub\\back-end\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/next-js/student-hub/app/home",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.Next.js: server-side.executor": "Run",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "D:\\next-js\\student-hub\\back-end\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\next-js\student-hub\app\home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\next-js\student-hub\back-end\prisma" />
-      <recent name="D:\next-js\student-hub\back-end\prisma\src" />
       <recent name="D:\next-js\student-hub\back-end\src" />
       <recent name="D:\next-js\student-hub\back-end" />
-      <recent name="D:\next-js\student-hub\app" />
+      <recent name="D:\next-js\student-hub" />
+      <recent name="D:\next-js\student-hub\back-end\prisma" />
+      <recent name="D:\next-js\student-hub\back-end\prisma\src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -104,7 +135,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Next.js: server-side" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
+      <package-json value="$PROJECT_DIR$/front-end/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -147,6 +178,7 @@
       <workItem from="1764343262842" duration="1295000" />
       <workItem from="1764344741521" duration="2563000" />
       <workItem from="1764592187182" duration="15189000" />
+      <workItem from="1764611465628" duration="17806000" />
     </task>
     <servers />
   </component>
