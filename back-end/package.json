@@ -8,15 +8,18 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "format": "prettier --write \"src/**/*.{ts,js,json,css,md}\"",
-    "lint": "eslint \"src/**/*.ts\" --fix"
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "mikro-orm-esm": "mikro-orm-esm"
   },
   "dependencies": {
+    "@mikro-orm/core": "^6.6.1",
     "@mikro-orm/postgresql": "^6.6.1",
     "@mikro-orm/reflection": "^6.6.1",
     "dotenv": "^17.2.3",
     "express": "^5.2.1"
   },
   "devDependencies": {
+    "@mikro-orm/cli": "^6.6.1",
     "@mikro-orm/migrations": "^6.6.1",
     "@types/express": "^5.0.6",
     "@types/node": "^24.10.1",

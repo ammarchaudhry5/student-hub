@@ -1,14 +1,19 @@
-import { PostgreSqlDriver, defineConfig } from "@mikro-orm/postgresql";
+import { PostgreSqlDriver, Options } from "@mikro-orm/postgresql";
 import { TsMorphMetadataProvider } from "@mikro-orm/reflection";
-
+import { Migrator } from "@mikro-orm/migrations";
 import dotenv from "dotenv";
-
 dotenv.config();
 
-export default defineConfig({
+const config: Options = {
   driver: PostgreSqlDriver,
-  entities: ["./dist/entities/*.js"],
-  entitiesTs: ["./src/entities/*.ts"],
+  extensions: [Migrator],
+  entities: ["./dist/entities/*.entity.js"],
+  entitiesTs: ["./src/entities/*.entity.ts"],
+  migrations: {
+    path: "./dist/migrations",
+    pathTs: "./src/migrations",
+    glob: "!(*.d).{js,ts}",
+  },
   dbName: process.env.DB_NAME,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -16,4 +21,5 @@ export default defineConfig({
   port: Number(process.env.DB_PORT) || 5432,
   debug: process.env.NODE_ENV !== "production",
   metadataProvider: TsMorphMetadataProvider,
-});
+};
+export default config;
