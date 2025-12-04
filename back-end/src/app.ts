@@ -32,14 +32,7 @@ process.env.NODE_ENV === "production"
   });
 
   app.get("/hello", (req, res) => {
-    res.json({ message: "Hello from Express + MikroORM!" });
-  });
-
-  app.post("/test", (req, res) => {
-    res.json({
-      message: "You sent:",
-      body: req.body,
-    });
+    res.json({ message: "Hello MikroORM!" });
   });
 
   // Start server
