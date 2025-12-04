@@ -14,6 +14,11 @@ const config: Options = {
     pathTs: "./src/migrations",
     glob: "!(*.d).{js,ts}",
   },
+  seeder: {
+    path: "./dist/seeders",
+    pathTs: "./src/seeders",
+    defaultSeeder: "UserSeeder",
+  },
   dbName: process.env.DB_NAME,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,

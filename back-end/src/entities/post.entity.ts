@@ -35,6 +35,6 @@ export class PostEntity {
   @OneToMany(() => CommentEntity, (comment) => comment.post)
   comments = new Collection<CommentEntity>(this);
 
-  @ManyToMany(() => UserEntity, (user) => user.savedPosts)
-  savedByUsers = new Collection<UserEntity>(this);
+  // @ManyToMany(() => UserEntity, (user) => user.savedPosts)
+  // savedByUsers = new Collection<UserEntity>(this);
 }

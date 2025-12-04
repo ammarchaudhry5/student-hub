@@ -9,8 +9,8 @@ export class NotificationItemEntity {
   @ManyToOne(() => NotificationGroupEntity)
   group!: NotificationGroupEntity;
 
-  @ManyToMany(() => UserEntity, (user) => user.notifications)
-  users = new Collection<UserEntity>(this);
+  // @ManyToMany(() => UserEntity, (user) => user.notifications)
+  // users = new Collection<UserEntity>(this);
 
   @Property()
   action!: string;
