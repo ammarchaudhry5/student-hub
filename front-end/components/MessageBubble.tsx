@@ -13,7 +13,7 @@ export const MessageBubble: React.FC<{ message: Message; isOwn: boolean }> = ({ 
     //             <div className="bg-pink-400 rounded-3xl p-4 w-48 relative">
     //                 <img
     //                     src={message.storyReply.storyImage}
-    //                     alt="Story"
+    //                     alt="StoryEntity"
     //                     className="w-full h-60 object-cover rounded-2xl"
     //                 />
     //             </div>
@@ -27,7 +27,7 @@ export const MessageBubble: React.FC<{ message: Message; isOwn: boolean }> = ({ 
             {!isOwn && (
                 <img
                     src="/images/user-1.jpg"
-                    alt="User"
+                    alt="UserEntity"
                     className="w-8 h-8 rounded-full flex-shrink-0"
                 />
             )}

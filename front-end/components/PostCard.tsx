@@ -7,7 +7,7 @@ interface PostCardProps {
     key: number;
     user: User
     post:Post
-    // comment: Comment
+    // comment: CommentEntity
 }
 
 export function PostCard({
@@ -22,7 +22,7 @@ export function PostCard({
     const [isPostCommentModalOpen, setIsPostCommentModalOpen] = useState(false);
     const [saved, setSaved] = useState(false);
 
-    console.log("Post Card", post);
+    console.log("PostEntity Card", post);
 
     const toggleLike = () => {
         setLiked(changed => !changed);

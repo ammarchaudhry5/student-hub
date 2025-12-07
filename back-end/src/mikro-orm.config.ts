@@ -1,4 +1,5 @@
-import { PostgreSqlDriver, Options } from "@mikro-orm/postgresql";
+import { Options } from "@mikro-orm/core";
+import { PostgreSqlDriver } from "@mikro-orm/postgresql";
 import { TsMorphMetadataProvider } from "@mikro-orm/reflection";
 import { Migrator } from "@mikro-orm/migrations";
 import dotenv from "dotenv";

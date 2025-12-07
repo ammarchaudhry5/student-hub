@@ -1,14 +1,11 @@
-// import { Router } from "express";
-// import { AuthController } from "../controller/auth.controller.ts";
-//
-// // const router = Router();
-// const router: Router = Router();
-// const authController = new AuthController();
-//
-// router.post("/register", (req, res) => authController.register(req, res));
-//
-// router.post("/login", (req, res) => authController.login(req, res));
-//
-// router.get("/me", (req, res) => authController.me(req, res));
-//
-// export default router;
+import { Router } from "express";
+import { AuthControllers } from "../controllers/auth.controllers.ts";
+
+const router: Router = Router();
+
+const controller = new AuthControllers();
+
+router.post("/register", (req, res) => controller.register(req, res));
+router.post("/login", (req, res) => controller.login(req, res));
+
+export default router;

@@ -1,12 +1,12 @@
 // import React, { useState } from "react";
 // import {PostDetailModal} from "@/components/PostDetailModal";
 // import {PostCommentModal} from "@/components/PostCommentModal";
-// import {Post, User, Comment} from "@/helpers/types";
+// import {PostEntity, UserEntity, CommentEntity} from "@/helpers/types";
 //
 // interface PostCardProps {
-//     user: User
-//     post:Post
-//     comment: Comment
+//     user: UserEntity
+//     post:PostEntity
+//     comment: CommentEntity
 // }
 //
 // export function PostCard({

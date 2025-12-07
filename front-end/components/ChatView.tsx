@@ -39,7 +39,7 @@ export function ChatView({
                         </button>
                     )}
 
-                    {/* User Info */}
+                    {/* UserEntity Info */}
                     <img
                         src={activeConversation.senderUserProfilePicture.profilePicture}
                         alt={activeConversation.senderName.name}
@@ -84,7 +84,7 @@ export function ChatView({
 
                     <input
                         type="text"
-                        placeholder="Message..."
+                        placeholder="MessageEntity..."
                         value={messageInput}
                         onChange={(e) => setMessageInput(e.target.value)}
                         className="flex-1 bg-transparent text-black placeholder-gray-500 focus:outline-none"

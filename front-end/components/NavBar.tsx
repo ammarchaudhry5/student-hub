@@ -13,7 +13,7 @@ const NavBar = () => {
     const [createOpen, setCreateOpen] = useState(false);
 
     const handlePostCreated = (post: Post) => {
-        console.log("New Post Created:", post);
+        console.log("New PostEntity Created:", post);
     };
 
     return (
