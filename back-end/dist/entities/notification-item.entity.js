@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { Entity, PrimaryKey, Property, ManyToOne } from "@mikro-orm/core";
 import { NotificationGroupEntity } from "./entities.ts";
 let NotificationItemEntity = class NotificationItemEntity {
@@ -17,22 +20,28 @@ let NotificationItemEntity = class NotificationItemEntity {
     followBack;
 };
 __decorate([
-    PrimaryKey()
+    PrimaryKey(),
+    __metadata("design:type", Number)
 ], NotificationItemEntity.prototype, "id", void 0);
 __decorate([
-    ManyToOne(() => NotificationGroupEntity)
+    ManyToOne(() => NotificationGroupEntity),
+    __metadata("design:type", NotificationGroupEntity)
 ], NotificationItemEntity.prototype, "group", void 0);
 __decorate([
-    Property()
+    Property(),
+    __metadata("design:type", String)
 ], NotificationItemEntity.prototype, "action", void 0);
 __decorate([
-    Property()
+    Property(),
+    __metadata("design:type", String)
 ], NotificationItemEntity.prototype, "time", void 0);
 __decorate([
-    Property({ nullable: true })
+    Property({ nullable: true }),
+    __metadata("design:type", String)
 ], NotificationItemEntity.prototype, "previewImage", void 0);
 __decorate([
-    Property({ nullable: true })
+    Property({ nullable: true }),
+    __metadata("design:type", Boolean)
 ], NotificationItemEntity.prototype, "followBack", void 0);
 NotificationItemEntity = __decorate([
     Entity()

@@ -1,3 +1,3 @@
-import { Options } from "@mikro-orm/postgresql";
+import { Options } from "@mikro-orm/core";
 declare const config: Options;
 export default config;

@@ -4,6 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { Entity, PrimaryKey, Property, OneToMany, Collection } from "@mikro-orm/core";
 import { NotificationItemEntity } from "./entities.ts";
 let NotificationGroupEntity = class NotificationGroupEntity {
@@ -12,13 +15,16 @@ let NotificationGroupEntity = class NotificationGroupEntity {
     list = new Collection(this);
 };
 __decorate([
-    PrimaryKey()
+    PrimaryKey(),
+    __metadata("design:type", Number)
 ], NotificationGroupEntity.prototype, "id", void 0);
 __decorate([
-    Property()
+    Property(),
+    __metadata("design:type", String)
 ], NotificationGroupEntity.prototype, "title", void 0);
 __decorate([
-    OneToMany(() => NotificationItemEntity, (item) => item.group)
+    OneToMany(() => NotificationItemEntity, (item) => item.group),
+    __metadata("design:type", Object)
 ], NotificationGroupEntity.prototype, "list", void 0);
 NotificationGroupEntity = __decorate([
     Entity()

@@ -6,7 +6,7 @@ dotenv.config();
 const config = {
     driver: PostgreSqlDriver,
     extensions: [Migrator],
-    entities: ["./dist/entities/*.entity.js"],
+    entities: ["./src/entities/*.entity.ts"],
     entitiesTs: ["./src/entities/*.entity.ts"],
     migrations: {
         path: "./dist/migrations",
