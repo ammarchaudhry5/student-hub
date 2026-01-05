@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:4000/auth/";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const AUTH_BASE = `${API_URL}/auth`;
 
 export const registerUser = async (data: {
     email: string;
@@ -7,18 +8,17 @@ export const registerUser = async (data: {
     name?: string;
 }) => {
     try {
-        const res = await fetch(`${API_URL}register`, {
+        const res = await fetch(`${AUTH_BASE}/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
         });
 
         if (!res.ok) {
-            const errorData = await res.json().catch(() => ({ 
-                success: false, 
-                message: `Server error: ${res.status} ${res.statusText}` 
+            return await res.json().catch(() => ({
+                success: false,
+                message: `Server error: ${res.status} ${res.statusText}`
             }));
-            return errorData;
         }
 
         return await res.json();
@@ -33,18 +33,17 @@ export const registerUser = async (data: {
 
 export const loginUser = async (data: { email: string; password: string }) => {
     try {
-        const res = await fetch(`${API_URL}login`, {
+        const res = await fetch(`${AUTH_BASE}/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
         });
 
         if (!res.ok) {
-            const errorData = await res.json().catch(() => ({ 
-                success: false, 
-                message: `Server error: ${res.status} ${res.statusText}` 
+            return await res.json().catch(() => ({
+                success: false,
+                message: `Server error: ${res.status} ${res.statusText}`
             }));
-            return errorData;
         }
 
         return await res.json();

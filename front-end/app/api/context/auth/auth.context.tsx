@@ -14,7 +14,6 @@ export const AuthContext = createContext<AuthContextType>({
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [token, setToken] = useState<string | null>(null);
 
-    // Load token from localStorage on mount
     useEffect(() => {
         const storedToken = localStorage.getItem("token");
         // eslint-disable-next-line react-hooks/set-state-in-effect

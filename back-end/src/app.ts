@@ -4,6 +4,12 @@ import { MikroORM } from "@mikro-orm/postgresql";
 import config from "./mikro-orm.config.ts";
 import authRoutes from "./routes/auth.routes.ts";
 import cors from "cors";
+import profileRoutes from "./routes/profile.routes.ts";
+import postRoutes from "./routes/post.routes.ts";
+import commentRoutes from "./routes/comment.routes.ts";
+import commentReplyRoutes from "./routes/commentReply.routes.ts";
+import storyRoutes from "./routes/story.routes.ts";
+import checkRoutes from "./routes/check.routes.ts";
 
 dotenv.config();
 
@@ -29,14 +35,21 @@ if (process.env.NODE_ENV === "production") {
 (async () => {
   DI.orm = await MikroORM.init(config);
 
+  app.use("/check", checkRoutes);
+
   app.use("/auth", authRoutes);
 
-  app.get("/", (_, res) => res.send("API is working!"));
-  // app.post("/test", (req, res) => {
-  //   console.log(req.body);
-  //   res.json(req.body);
-  //   res.send("API is working!");
-  // });
+  app.use("/profile", profileRoutes);
 
-  app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+  app.use("/posts", postRoutes);
+
+  app.use("/comments", commentRoutes);
+
+  app.use("/comment-replies", commentReplyRoutes);
+
+  app.use("/story", storyRoutes);
+
+  app.listen(PORT, () =>
+    console.log(`==============>>> Server running on port ${PORT} <<<==============`),
+  );
 })();

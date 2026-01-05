@@ -4,7 +4,7 @@ import { AuthServices } from "../services/auth.services.ts";
 const authService = new AuthServices();
 
 export class AuthControllers {
-  // Register a new user
+  // Register new user
   async register(req: Request, res: Response) {
     try {
       const { email, password, username, name, profilePicture, bio, links } = req.body;

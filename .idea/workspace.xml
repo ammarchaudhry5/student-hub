@@ -5,37 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2da58544-e8dd-46b6-91d6-5025a91016c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front-end/components/EditProfile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/comment.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/commentReply.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/post.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/profile.controllers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/controllers/story.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/check.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/comment.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/commentReply.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/post.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/profile.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/routes/story.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/comment.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/commentReply.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/post.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/profile.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back-end/src/services/story.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/app/api/services/profile/profile.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/app.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/app.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/comment-reply.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/comment-reply.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/comment.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/comment.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/conversations.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/conversations.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/message.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/message.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/notification-group.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/notification-group.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/notification-item.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/notification-item.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/post.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/post.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/story.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/story.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/entities/user.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/entities/user.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/mikro-orm.config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/mikro-orm.config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/mikro-orm.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/mikro-orm.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/seeders/UserSeeder.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/seeders/UserSeeder.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/dist/seeders/UserSeeder.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/dist/seeders/UserSeeder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/mikro-orm.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/mikro-orm.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/CommentEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/CommentEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/CommentReplyEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/CommentReplyEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/ConversationEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/ConversationEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/MessageEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/MessageEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/NotificationGroupEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/NotificationGroupEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/NotificationItemEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/NotificationItemEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/PostEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/PostEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/StoryEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/StoryEntity.ts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/temp/UserEntity.ts.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/temp/UserEntity.ts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/controllers/auth.controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/controllers/auth.controllers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/routes/auth.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/routes/auth.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/seeders/UserSeeder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/seeders/UserSeeder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/services/auth.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/services/auth.services.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/app/(dashboard)/profile/[username]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/app/(dashboard)/profile/[username]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/app/api/context/auth/auth.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/app/api/context/auth/auth.context.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/app/api/services/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/app/api/services/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/app/auth/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/app/auth/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/components/EditProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/components/EditProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/utils/url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/utils/url.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +163,8 @@
       <workItem from="1765184527330" duration="1483000" />
       <workItem from="1765631683688" duration="594000" />
       <workItem from="1765886491975" duration="192000" />
-      <workItem from="1766572325277" duration="8568000" />
+      <workItem from="1766572325277" duration="10536000" />
+      <workItem from="1767358431350" duration="28352000" />
     </task>
     <servers />
   </component>

@@ -28,9 +28,9 @@ export class AuthServices {
       password: hashed,
       username: data.username,
       name: data.name,
-      profilePicture: data.profilePicture || null,
-      bio: data.bio || null,
-      links: data.links || null,
+      profilePicture: data.profilePicture || "null",
+      bio: data.bio || "null",
+      links: data.links || "null",
       isLoggedIn: false,
       token: "",
     });

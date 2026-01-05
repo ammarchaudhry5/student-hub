@@ -104,7 +104,7 @@ const NavBar = () => {
                             isActive={activeTab === "profile"}
                             onClick={() => {
                                 setActiveTab("profile");
-                                router.push("/profile/[username]");
+                                router.push(`/profile/${user.username}`);
                             }}
                         />
 
@@ -195,7 +195,7 @@ const NavBar = () => {
                     showLabel={false}
                     onClick={() => {
                         setActiveTab("profile");
-                        router.push("/profile/[username]");
+                        router.push(`/profile/${user.username}`);
                     }}
                 />
             </div>

@@ -43,7 +43,7 @@ export default function StudentHubAuth() {
             return;
         }
 
-        if (password.length < 8) {
+        if (password.length < 3) {
             setError("Password must be at least 8 characters long.");
             console.log("Password too short");
             return;
